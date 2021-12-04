@@ -1,5 +1,5 @@
 import requests
 
-requests = requests.get("https://playground.learnqa.ru/api/hello")
+request = requests.get("https://playground.learnqa.ru/api/hello")
 
-print(requests.text)
+print(request.text)
