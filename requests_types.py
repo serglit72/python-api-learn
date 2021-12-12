@@ -2,7 +2,7 @@ import requests
 
 url = "https://playground.learnqa.ru/ajax/api/compare_query_type"
 
-# Assignment 7.1
+print("# Assignment 7.1")
 response1 = requests.get(url)
 print("requests.get(url) output: ", response1.text)
 # OUTPUT: Wrong method provided
@@ -20,12 +20,13 @@ print("requests.delete(url) output: ", response4.text)
 # OUTPUT: Wrong method provided
 
 # Assignment 7.2
-response5 = requests.head(url, params={"method":"GET"})
-print("requests.head(url) output: ", response5.text)
+print("# Assignment 7.2")
+response5 = requests.head(url, params={"method":"HEAD"})
+print("requests.head(url) output for HEAD: ", response5.text)
 # OUTPUT: empty
 
 # Assignment 7.3
-
+print("# Assignment 7.3")
 response6 = requests.get(url, params={"method":"GET"})
 print("requests.get(url) output for GET: ", response6.text)
 # OUTPUT: {"success":"!"}
@@ -42,8 +43,10 @@ response9 = requests.delete(url, data={"method":"DELETE"})
 print("requests.delete(url) output for DELETE: ", response9.text)
 # OUTPUT: {"success":"!"}
 
+
 # Assignment 7.4
-print("Start for- loop")
+print("# Assignment 7.4")
+print("Using a for- loop")
 methods = ['GET', 'POST', 'DELETE', 'PUT']
 for metd in methods:
     response = requests.put(url, data={"method": metd})
