@@ -2,6 +2,7 @@ import requests
 import time
 import json
 
+
 print("#STEP 1 - create a task")
 url = "https://playground.learnqa.ru/ajax/api/longtime_job"
 # create a task
