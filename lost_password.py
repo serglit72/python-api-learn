@@ -2,7 +2,6 @@ import requests
 from lxml import html
 
 response = requests.get("https://en.wikipedia.org/wiki/List_of_the_most_common_passwords")
-
 tree = html.fromstring(response.text)
 password_list = []
 locator = '//*[contains(text(),"Top 25 most common passwords by year according to SplashData")]//..//td[@align="left"]/text()'
