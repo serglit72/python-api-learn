@@ -6,8 +6,7 @@ from lib.assertions import Assertions
 
 class TestUserAuth(BaseCase):
 
-    exclude_params = [("no_cookie"),
-                      ("no_token")]
+    exclude_params = ["no_cookie", "no_token"]
 
     def setup(self):
         data = {
@@ -47,7 +46,7 @@ class TestUserAuth(BaseCase):
         else:
             response2 = requests.get(
                 "https://playground.learnqa.ru/api/user/auth",
-                cookies={"auth_sid":self.auth_sid}
+                cookies={"auth_sid": self.auth_sid}
             )
 
         Assertions.assert_json_value_by_name(
