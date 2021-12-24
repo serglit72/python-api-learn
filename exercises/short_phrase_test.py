@@ -1,5 +1,6 @@
-#short_phrase_check
+
 import pytest
+
 
 def test_short_phrase():
     phrase = input("Set a phrase: ")

@@ -1,6 +1,7 @@
 import requests
 import pytest
 
+
 def test_headers_print():
 
     url = "https://playground.learnqa.ru/api/homework_header"
