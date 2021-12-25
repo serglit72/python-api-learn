@@ -4,13 +4,13 @@ from lib.my_requests import MyRequests
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 
+
 class TestUserRegister(BaseCase):
     # def setup(self):
     #     base_part = "learnqa"
     #     domain = "example.com"
     #     random_part = datetime.now().strftime("%m%d%Y%H%M%S")
     #     self.email = f"{base_part}{random_part}@{domain}"
-
 
     def test_create_new_user_successfully(self):
         data = self.prepare_registration_data()
@@ -75,6 +75,7 @@ class TestUserRegister(BaseCase):
         ('lastName'),
         ('email')
     ]
+
     @pytest.mark.parametrize("fields", user_fields)
     def test_create_user_without_some_field(self, fields):
 

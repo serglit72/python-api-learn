@@ -4,7 +4,7 @@ services:
   test_runner:
     build: .
     image: pytest_runner
-    container_name: pytest_ranner_works
+    container_name: pytest_runner_works
     environment:
       - ENV=dev
     volumes:
