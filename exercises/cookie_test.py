@@ -12,3 +12,4 @@ def test_cookie_print():
     print(f"The value for given cookie is {cookie['HomeWork']}")
 
     assert "HomeWork" in cookie, "No 'HomeWork' in cookies"
+    
