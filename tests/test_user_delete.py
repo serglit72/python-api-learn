@@ -1,10 +1,13 @@
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
+import allure
 
 
+@allure.epic("Cases for DELETE method")
 class TestUserDelete(BaseCase):
 
+    @allure.description("This test checks DELETE method for unauthorized user")
     def test_user_delete(self):
 
 
@@ -32,7 +35,7 @@ class TestUserDelete(BaseCase):
         except: Exception(
              print(f"It's not allowed to Delete ")
         )
-
+    @allure.description("This test checks DELETE user DATA for authorized user")
     def test_get_deleted_user_data(self):
 
          # REGISTER
@@ -102,4 +105,3 @@ class TestUserDelete(BaseCase):
             cookies={"auth_sid": auth_sid}
         )
         Assertions.assert_code_status(response7, 404)
-       

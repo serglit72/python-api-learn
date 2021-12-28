@@ -1,9 +1,12 @@
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
+import allure
 
 
+@allure.epic("Cases for PUT method")
 class TestUserEdit(BaseCase):
+    @allure.description("Positive test: user is just created: changing a userName")
     def test_edit_just_created_user(self):
 
         # REGISTER
